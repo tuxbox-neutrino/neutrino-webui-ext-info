@@ -26,6 +26,18 @@ It is switched on until it is switched off under Settings → Extensions
 
 Its texts are in `languages/` (`webuiExtTexts('info')`).
 
+## Installation
+
+The info screen has its own repository and its own package
+(`neutrino-webui-ext-info` in meta-neutrino), which images carry by
+default. `make install DESTDIR=<root> HTTPDDIR=<folder>` puts it into
+the web interface's folder (`/share/tuxbox/neutrino/httpd` on a box):
+the extension under `extensions/info`, and `info/index.html`, which
+keeps the former address `/info/` leading to it.
+
+It needs Neutrino's web interface (Neutrino-Web-UI), whose scripts its
+page loads.
+
 ## Release
 
 ```sh
